@@ -96,8 +96,10 @@ exports.devServer = function(options) {
       //
       // 0.0.0.0 is available to all network devices
       // unlike default `localhost`.
-      host: options.host, // Defaults to `localhost`
-      port: options.port // Defaults to 8080
+      host: options.host || '0.0.0.0', // Defaults to `localhost`
+      port: options.port, // Defaults to 8080
+      compress: true,
+      public: 'web-test-mihaitaivli.c9users.io'
     },
     plugins: [
       // Enable multi-pass compilation for enhanced performance
